@@ -55,7 +55,7 @@
                 </nav>
                 <div class="container-fluid">
                     <div class="d-sm-flex justify-content-between align-items-center mb-4">
-                        <h3 class="text-dark mb-0">Dashboard</h3><button class="btn btn-success" type="button">Nueva Tarea&nbsp;<i class="fa fa-plus"></i></button>
+                        <h3 class="text-dark mb-0">Dashboard</h3><button class="btn btn-success" type="button" data-target="#dialog" data-toggle="modal">Nueva Tarea&nbsp;<i class="fa fa-plus"></i></button>
                     </div><!-- Start: Chart -->
                     <div class="row">
                         <!-- Start: Row -->
@@ -177,16 +177,17 @@
             </footer>
         </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
     </div>
-    <div class="modal fade" role="dialog" tabindex="-1">
+    <div class="modal fade" role="dialog" tabindex="-1" id="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Nueva Tarea</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                 </div>
                 <div class="modal-body">
-                    <form action="success.html"><input class="form-control" type="text" placeholder="Título"><input class="form-control" type="text" placeholder="Responsable"></form>
+                    <form action="success.html"><input class="form-control" type="text" placeholder="Título"><input class="form-control" type="text" placeholder="Responsable">
+                        <div class="modal-footer"><button class="btn btn-light" type="reset" data-dismiss="modal">Cancelar</button><button class="btn btn-primary" type="submit">Agregar</button></div>
+                    </form>
                 </div>
-                <div class="modal-footer"><button class="btn btn-light" type="reset" data-dismiss="modal">Cancelar</button><button class="btn btn-primary" type="submit">Agregar</button></div>
             </div>
         </div>
     </div>
