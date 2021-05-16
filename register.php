@@ -26,19 +26,19 @@
                             <div class="text-center">
                                 <h4 class="text-dark mb-4" style="font-size: 3em;">Registro</h4>
                             </div>
-                            <form class="user">
+                            <form class="user" method="POST" action="dashboard.php">
                                 <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user" type="text" id="exampleFirstName" placeholder="Nombre" name="first_name" style="font-size: 1.2em;"></div>
-                                    <div class="col-sm-6" style="font-size: 1.2em;"><input class="form-control form-control-user" type="text" id="exampleFirstName" placeholder="Apellidos" name="last_name" style="font-size: 1.2em;"></div>
+                                    <div class="col-sm-6 mb-3 mb-sm-0"><input required class="form-control form-control-user" type="text" id="exampleFirstName" placeholder="Nombre" name="first_name" style="font-size: 1.2em;"></div>
+                                    <div class="col-sm-6" style="font-size: 1.2em;"><input required class="form-control form-control-user" type="text" id="exampleFirstName" placeholder="Apellidos" name="last_name" style="font-size: 1.2em;"></div>
                                 </div>
-                                <div class="form-group" style="font-size: 1.2em;"><input class="form-control form-control-user" type="email" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Correo" name="email" style="font-size: 1em;"></div>
+                                <div class="form-group" style="font-size: 1.2em;"><input required class="form-control form-control-user" type="email" id="exampleinput requiredEmail" aria-describedby="emailHelp" placeholder="Correo" name="email" style="font-size: 1em;"></div>
                                 <div class="form-group row" style="font-size: 1.2em;">
-                                    <div class="col-sm-6 mb-3 mb-sm-0" style="font-size: 1.2em;"><input class="form-control form-control-user" type="password" id="examplePasswordInput" placeholder="Contraseña" name="password" style="font-size: 0.75em;"></div>
-                                    <div class="col-sm-6" style="font-size: 1.2em;"><input class="form-control form-control-user" type="password" id="exampleRepeatPasswordInput" placeholder="Confirmar contraseña" name="password_repeat" style="font-size: 0.75em;"></div>
+                                    <div class="col-sm-6 mb-3 mb-sm-0" style="font-size: 1.2em;"><input required class="form-control form-control-user" type="password" id="examplePasswordinput required" placeholder="Contraseña" name="password" style="font-size: 0.75em;"></div>
+                                    <div class="col-sm-6" style="font-size: 1.2em;"><input required class="form-control form-control-user" type="password" id="exampleRepeatPasswordinput required" placeholder="Confirmar contraseña" name="password_repeat" style="font-size: 0.75em;"></div>
                                 </div><button class="btn btn-primary btn-block text-white btn-user" type="submit" style="font-size: 1.3em;">Registrarse</button>
                                 <hr>
                             </form>
-                            <div class="text-center"><a class="small" href="index.html" style="font-size: 1.2em;">Ya tienes cuenta? Ingresa aquí!</a></div>
+                            <div class="text-center"><a class="small" href="index.php" style="font-size: 1.2em;">Ya tienes cuenta? Ingresa aquí!</a></div>
                         </div>
                     </div>
                 </div>

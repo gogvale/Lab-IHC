@@ -1,3 +1,8 @@
+<?php
+if(!isset($_COOKIE["email"]))
+    setcookie("email", $_POST["email"], time() + (86400 * 30), "/");
+?>
+
 <!DOCTYPE html>
 <html lang="es-mx">
 
@@ -22,7 +27,7 @@
                 </a>
                 <hr class="sidebar-divider my-0">
                 <ul class="navbar-nav text-light" id="accordionSidebar">
-                    <li class="nav-item"><a class="nav-link active" href="dashboard.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="dashboard.php"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="profile.html"><i class="fas fa-user"></i><span>Perfil</span></a></li>
                 </ul>
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
@@ -41,12 +46,13 @@
                                         </div>
                                     </form>
                                 </div>
-                            </li>
+                            </li> 
+
                             <div class="d-none d-sm-block topbar-divider"></div>
                             <li class="nav-item dropdown no-arrow">
-                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#"><span class="d-none d-lg-inline mr-2 text-gray-600 small">Valerie Luna</span><img class="border rounded-circle img-profile" src="assets/img/avatars/avatar1.jpeg"></a>
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#"><span class="d-none d-lg-inline mr-2 text-gray-600 small"><?=   $_POST["email"] ??  $_COOKIE["email"] ?></span><img class="border rounded-circle img-profile" src="assets/img/avatars/avatar1.jpeg"></a>
                                     <div class="dropdown-menu shadow dropdown-menu-right animated--grow-in"><a class="dropdown-item" href="#"><i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Profile</a><a class="dropdown-item" href="#"><i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Settings</a><a class="dropdown-item" href="#"><i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Activity log</a>
-                                        <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Logout</a>
+                                        <div class="dropdown-divider"></div><a class="dropdown-item" href="index.php?logout" onclick='confirm("Seguro quieres salir?")'><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Logout</a>
                                     </div>
                                 </div>
                             </li>
@@ -184,7 +190,7 @@
                     <h4 class="modal-title">Nueva Tarea</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                 </div>
                 <div class="modal-body">
-                    <form action="success.html"><input class="form-control" type="text" placeholder="Título"><input class="form-control" type="text" placeholder="Responsable">
+                    <form action="dashboard.php" method="POST"><input required class="form-control" type="text" placeholder="Título"><input class="form-control" type="text" placeholder="Responsable">
                         <div class="modal-footer"><button class="btn btn-light" type="reset" data-dismiss="modal">Cancelar</button><button class="btn btn-primary" type="submit">Agregar</button></div>
                     </form>
                 </div>

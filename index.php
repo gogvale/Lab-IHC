@@ -1,3 +1,8 @@
+<?php
+if(isset($_GET["logout"]))
+    unset($_GET["email"]);
+?>
+
 <!DOCTYPE html>
 <html lang="es-mx">
 
@@ -28,17 +33,17 @@
                                     <div class="text-center">
                                         <h4 class="text-dark mb-4" style="font-size: 2em;">Bienvenido!</h4>
                                     </div>
-                                    <form class="user" action="dashboard.html">
-                                        <div class="form-group"><input class="form-control form-control-user" type="email" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Correo" name="email" style="font-size: 1.2em;"></div>
-                                        <div class="form-group"><input class="form-control form-control-user" type="password" id="exampleInputPassword" placeholder="Contraseña" name="password" style="font-size: 1.2em;"></div>
+                                    <form class="user" method="POST" action="dashboard.php">
+                                        <div class="form-group"><input required class="form-control form-control-user" type="email" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Correo" name="email" style="font-size: 1.2em;"></div>
+                                        <div class="form-group"><input required class="form-control form-control-user" type="password" id="exampleInputPassword" placeholder="Contraseña" name="password" style="font-size: 1.2em;"></div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
                                                 <div class="form-check"><input class="form-check-input custom-control-input" type="checkbox" id="formCheck-1" checked=""><label class="form-check-label custom-control-label" for="formCheck-1" style="font-size: 1.2em;">Recordarme</label></div>
                                             </div>
                                         </div><button class="btn btn-primary btn-block text-white btn-user" type="submit" style="font-size: 1.2em;">Login</button>
                                     </form>
-                                    <div class="text-center" style="margin-top: 1em;"><a class="small" href="forgot-password.html" style="font-size: 1em;">Olvidaste la contraseña?</a></div>
-                                    <div class="text-center"><a class="small" href="register.html" style="font-size: 1em;">Crea una cuenta!</a></div>
+                                    <div class="text-center" style="margin-top: 1em;"><a class="small" href="forgot-password.php" style="font-size: 1em;">Olvidaste la contraseña?</a></div>
+                                    <div class="text-center"><a class="small" href="register.php" style="font-size: 1em;">Crea una cuenta!</a></div>
                                 </div>
                             </div>
                         </div>
