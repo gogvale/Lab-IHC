@@ -16,6 +16,7 @@ if(!isset($_COOKIE["email"]))
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="assets/css/styles.min.css">
+    <script src="assets/js/dashboard.js"></script>
 </head>
 
 <body id="page-top" style="font-size: 24px;">
@@ -80,9 +81,9 @@ if(!isset($_COOKIE["email"]))
                                             <div class="col-auto">
                                                 <div class="row">
                                                     <div class="col" style="margin: 0;">
-                                                        <div class="custom-control custom-checkbox" style="padding: 0;"><input class="custom-control-input" type="checkbox" id="formCheck-1"><label class="custom-control-label" for="formCheck-1"></label></div>
+                                                        <div class="custom-control custom-checkbox" onclick=completarTarea(this.childNodes[0].id) style="padding: 0;"><input class="custom-control-input" type="checkbox" id="formCheck-1"><label class="custom-control-label" for="formCheck-1"></label></div>
                                                     </div>
-                                                    <div class="col"><a onclick="confirm('Deseas borrar la tarea?')" href="#"><i class="fa fa-trash" style="color: var(--red);font-size: 22px;"></i></a></div>
+                                                    <div class="col"><a onclick=borrarTarea(this.querySelector("#test123").parentElement.parentElement.querySelector("input").id) href="#"><i class="fa fa-trash" style="color: var(--red);font-size: 22px;"></i></a></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -95,9 +96,9 @@ if(!isset($_COOKIE["email"]))
                                             <div class="col-auto">
                                                 <div class="row">
                                                     <div class="col" style="margin: 0;">
-                                                        <div class="custom-control custom-checkbox" style="padding: 0;"><input class="custom-control-input" type="checkbox" id="formCheck-3"><label class="custom-control-label" for="formCheck-3"></label></div>
+                                                        <div class="custom-control custom-checkbox" onclick=completarTarea(this.childNodes[0].id) style="padding: 0;"><input class="custom-control-input" type="checkbox" id="formCheck-3"><label class="custom-control-label" for="formCheck-3"></label></div>
                                                     </div>
-                                                    <div class="col"><a onclick="confirm('Deseas borrar la tarea?')" href="#"><i class="fa fa-trash" style="color: var(--red);font-size: 22px;"></i></a></div>
+                                                    <div class="col"><a onclick=borrarTarea(this.querySelector("#test123").parentElement.parentElement.querySelector("input").id) href="#"><i class="fa fa-trash" style="color: var(--red);font-size: 22px;"></i></a></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -110,9 +111,9 @@ if(!isset($_COOKIE["email"]))
                                             <div class="col-auto">
                                                 <div class="row">
                                                     <div class="col" style="margin: 0;">
-                                                        <div class="custom-control custom-checkbox" style="padding: 0;"><input class="custom-control-input" type="checkbox" id="formCheck-2"><label class="custom-control-label" for="formCheck-2"></label></div>
+                                                        <div class="custom-control custom-checkbox" onclick=completarTarea(this.childNodes[0].id) style="padding: 0;"><input class="custom-control-input" type="checkbox" id="formCheck-2"><label class="custom-control-label" for="formCheck-2"></label></div>
                                                     </div>
-                                                    <div class="col"><a onclick="confirm('Deseas borrar la tarea?')" href="#"><i class="fa fa-trash" style="color: var(--red);font-size: 22px;"></i></a></div>
+                                                    <div class="col"><a onclick=borrarTarea(this.querySelector("#test123").parentElement.parentElement.querySelector("input").id) href="#"><i class="fa fa-trash" style="color: var(--red);font-size: 22px;"></i></a></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -124,10 +125,10 @@ if(!isset($_COOKIE["email"]))
                                 <div class="card-header py-3">
                                     <h6 class="text-primary font-weight-bold m-0">Tareas Completadas</h6>
                                 </div>
-                                <ul class="list-group list-group-flush">
+                                <ul id="finished" class="list-group list-group-flush">
                                     <li class="list-group-item">
                                         <div class="row align-items-center no-gutters">
-                                            <div class="col mr-2"><del><h6 class="mb-0"><strong>Lunch meeting</strong> <span> (Victor)</span> </h6> </del>
+                                            <div class="col mr-2"><h6 class="mb-0"><strong>Lunch meeting</strong> <span> (Victor)</span> </h6>
 <span class="text-xs">10:30 AM</span></div>
                                             <div class="col-auto">
                                                 <div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" id="formCheck-6" checked=""><label class="custom-control-label" for="formCheck-6"></label></div>
@@ -136,7 +137,7 @@ if(!isset($_COOKIE["email"]))
                                     </li>
                                     <li class="list-group-item">
                                         <div class="row align-items-center no-gutters">
-                                            <div class="col mr-2"><del><h6 class="mb-0"><strong>Lunch meeting</strong> <span> (Victor)</span> </h6> </del>
+                                            <div class="col mr-2"><h6 class="mb-0"><strong>Lunch meeting</strong> <span> (Victor)</span> </h6>
 <span class="text-xs">10:30 AM</span></div>
                                             <div class="col-auto">
                                                 <div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" id="formCheck-5" checked=""><label class="custom-control-label" for="formCheck-5"></label></div>
@@ -145,7 +146,7 @@ if(!isset($_COOKIE["email"]))
                                     </li>
                                     <li class="list-group-item">
                                         <div class="row align-items-center no-gutters">
-                                            <div class="col mr-2"><del><h6 class="mb-0"><strong>Lunch meeting</strong> <span> (Victor)</span> </h6> </del>
+                                            <div class="col mr-2"><h6 class="mb-0"><strong>Lunch meeting</strong> <span> (Victor)</span> </h6>
 <span class="text-xs">10:30 AM</span></div>
                                             <div class="col-auto">
                                                 <div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" id="formCheck-4" checked=""><label class="custom-control-label" for="formCheck-4"></label></div>

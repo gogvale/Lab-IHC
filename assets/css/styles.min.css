@@ -1,1 +1,5 @@
 .form-control{margin:1em 0}h6,span{font-size:1em}
+
+#finished>li>div>.col.mr-2>h6{
+    text-decoration: line-through;
+}
