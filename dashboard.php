@@ -82,7 +82,7 @@ if(!isset($_COOKIE["email"]))
                                                     <div class="col" style="margin: 0;">
                                                         <div class="custom-control custom-checkbox" style="padding: 0;"><input class="custom-control-input" type="checkbox" id="formCheck-1"><label class="custom-control-label" for="formCheck-1"></label></div>
                                                     </div>
-                                                    <div class="col"><a href="#"><i class="fa fa-trash" style="color: var(--red);font-size: 22px;"></i></a></div>
+                                                    <div class="col"><a onclick="confirm('Deseas borrar la tarea?')" href="#"><i class="fa fa-trash" style="color: var(--red);font-size: 22px;"></i></a></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -95,9 +95,9 @@ if(!isset($_COOKIE["email"]))
                                             <div class="col-auto">
                                                 <div class="row">
                                                     <div class="col" style="margin: 0;">
-                                                        <div class="custom-control custom-checkbox" style="padding: 0;"><input class="custom-control-input" type="checkbox" id="formCheck-3"><label class="custom-control-label" for="formCheck-1"></label></div>
+                                                        <div class="custom-control custom-checkbox" style="padding: 0;"><input class="custom-control-input" type="checkbox" id="formCheck-3"><label class="custom-control-label" for="formCheck-3"></label></div>
                                                     </div>
-                                                    <div class="col"><a href="#"><i class="fa fa-trash" style="color: var(--red);font-size: 22px;"></i></a></div>
+                                                    <div class="col"><a onclick="confirm('Deseas borrar la tarea?')" href="#"><i class="fa fa-trash" style="color: var(--red);font-size: 22px;"></i></a></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -110,9 +110,9 @@ if(!isset($_COOKIE["email"]))
                                             <div class="col-auto">
                                                 <div class="row">
                                                     <div class="col" style="margin: 0;">
-                                                        <div class="custom-control custom-checkbox" style="padding: 0;"><input class="custom-control-input" type="checkbox" id="formCheck-2"><label class="custom-control-label" for="formCheck-1"></label></div>
+                                                        <div class="custom-control custom-checkbox" style="padding: 0;"><input class="custom-control-input" type="checkbox" id="formCheck-2"><label class="custom-control-label" for="formCheck-2"></label></div>
                                                     </div>
-                                                    <div class="col"><a href="#"><i class="fa fa-trash" style="color: var(--red);font-size: 22px;"></i></a></div>
+                                                    <div class="col"><a onclick="confirm('Deseas borrar la tarea?')" href="#"><i class="fa fa-trash" style="color: var(--red);font-size: 22px;"></i></a></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -130,7 +130,7 @@ if(!isset($_COOKIE["email"]))
                                             <div class="col mr-2"><del><h6 class="mb-0"><strong>Lunch meeting</strong> <span> (Victor)</span> </h6> </del>
 <span class="text-xs">10:30 AM</span></div>
                                             <div class="col-auto">
-                                                <div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" id="formCheck-1" checked=""><label class="custom-control-label" for="formCheck-1"></label></div>
+                                                <div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" id="formCheck-6" checked=""><label class="custom-control-label" for="formCheck-6"></label></div>
                                             </div>
                                         </div>
                                     </li>
@@ -139,7 +139,7 @@ if(!isset($_COOKIE["email"]))
                                             <div class="col mr-2"><del><h6 class="mb-0"><strong>Lunch meeting</strong> <span> (Victor)</span> </h6> </del>
 <span class="text-xs">10:30 AM</span></div>
                                             <div class="col-auto">
-                                                <div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" id="formCheck-5" checked=""><label class="custom-control-label" for="formCheck-1"></label></div>
+                                                <div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" id="formCheck-5" checked=""><label class="custom-control-label" for="formCheck-5"></label></div>
                                             </div>
                                         </div>
                                     </li>
@@ -148,7 +148,7 @@ if(!isset($_COOKIE["email"]))
                                             <div class="col mr-2"><del><h6 class="mb-0"><strong>Lunch meeting</strong> <span> (Victor)</span> </h6> </del>
 <span class="text-xs">10:30 AM</span></div>
                                             <div class="col-auto">
-                                                <div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" id="formCheck-4" checked=""><label class="custom-control-label" for="formCheck-1"></label></div>
+                                                <div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" id="formCheck-4" checked=""><label class="custom-control-label" for="formCheck-4"></label></div>
                                             </div>
                                         </div>
                                     </li>
