@@ -72,7 +72,7 @@ if(!isset($_COOKIE["email"]))
                                 <div class="card-header py-3">
                                     <h6 class="text-primary font-weight-bold m-0">Tareas Restantes</h6>
                                 </div>
-                                <ul class="list-group list-group-flush">
+                                <ul id="todo" class="list-group list-group-flush">
                                     <li class="list-group-item">
                                         <div class="row align-items-center no-gutters">
                                             <div class="col mr-2">
@@ -83,7 +83,7 @@ if(!isset($_COOKIE["email"]))
                                                     <div class="col" style="margin: 0;">
                                                         <div class="custom-control custom-checkbox" onclick=completarTarea(this.childNodes[0].id) style="padding: 0;"><input class="custom-control-input" type="checkbox" id="formCheck-1"><label class="custom-control-label" for="formCheck-1"></label></div>
                                                     </div>
-                                                    <div class="col"><a onclick=borrarTarea(this.querySelector("#test123").parentElement.parentElement.querySelector("input").id) href="#"><i class="fa fa-trash" style="color: var(--red);font-size: 22px;"></i></a></div>
+                                                    <div class="col"><a onclick=borrarTarea(this.parentElement.parentElement.querySelector("input").id) href="#"><i class="fa fa-trash" style="color: var(--red);font-size: 22px;"></i></a></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -98,7 +98,7 @@ if(!isset($_COOKIE["email"]))
                                                     <div class="col" style="margin: 0;">
                                                         <div class="custom-control custom-checkbox" onclick=completarTarea(this.childNodes[0].id) style="padding: 0;"><input class="custom-control-input" type="checkbox" id="formCheck-3"><label class="custom-control-label" for="formCheck-3"></label></div>
                                                     </div>
-                                                    <div class="col"><a onclick=borrarTarea(this.querySelector("#test123").parentElement.parentElement.querySelector("input").id) href="#"><i class="fa fa-trash" style="color: var(--red);font-size: 22px;"></i></a></div>
+                                                    <div class="col"><a onclick=borrarTarea(this.parentElement.parentElement.querySelector("input").id) href="#"><i class="fa fa-trash" style="color: var(--red);font-size: 22px;"></i></a></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -113,7 +113,7 @@ if(!isset($_COOKIE["email"]))
                                                     <div class="col" style="margin: 0;">
                                                         <div class="custom-control custom-checkbox" onclick=completarTarea(this.childNodes[0].id) style="padding: 0;"><input class="custom-control-input" type="checkbox" id="formCheck-2"><label class="custom-control-label" for="formCheck-2"></label></div>
                                                     </div>
-                                                    <div class="col"><a onclick=borrarTarea(this.querySelector("#test123").parentElement.parentElement.querySelector("input").id) href="#"><i class="fa fa-trash" style="color: var(--red);font-size: 22px;"></i></a></div>
+                                                    <div class="col"><a onclick=borrarTarea(this.parentElement.parentElement.querySelector("input").id) href="#"><i class="fa fa-trash" style="color: var(--red);font-size: 22px;"></i></a></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -191,8 +191,12 @@ if(!isset($_COOKIE["email"]))
                     <h4 class="modal-title">Nueva Tarea</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                 </div>
                 <div class="modal-body">
-                    <form action="dashboard.php" method="POST"><input required class="form-control" type="text" placeholder="Título"><input class="form-control" type="text" placeholder="Responsable">
-                        <div class="modal-footer"><button class="btn btn-light" type="reset" data-dismiss="modal">Cancelar</button><button class="btn btn-primary" type="submit">Agregar</button></div>
+                    <form>
+                        <input required class="form-control" type="text" placeholder="Título">
+                        <input class="form-control" type="text" placeholder="Responsable">
+                        <div class="modal-footer">
+                            <button class="btn btn-light" type="reset" data-dismiss="modal">Cancelar</button>
+                            <button class="btn btn-primary" type="button" onclick=agregarTarea(this.parentElement.parentElement)>Agregar</button></div>
                     </form>
                 </div>
             </div>
